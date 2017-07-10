@@ -90,7 +90,7 @@ img {
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1190px) {
     body, html {
-        font-size: 200%;
+        height: 50%;
     }
     .banner {
         background-attachment: scroll;
@@ -100,9 +100,6 @@ img {
 }
 
 @media (max-width: 1190px) {
-    body, html {
-        font-size: 150%!important;
-    }
     .navbar {
         background-color: #656565;
         color: #ffffff;
