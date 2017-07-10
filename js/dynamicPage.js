@@ -116,9 +116,10 @@ function sendContactMail(name, mailAddress, subject, message, copy) {
         async: "false",
         data: items,
         success: function (result) {
-            if (result.success) {
-                var obj = JSON.parse(result.data);
+            if (result) {
+                alert("Die E-Mail wurde versendet");
             }
+            else alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut...");
         },
         error: function () {
 
