@@ -92,4 +92,15 @@ img {
         background-color: #656565;
         color: #ffffff;
      }
+    .dropdown-menu li a{
+        color: white!important;
+    }
+    .collapse {
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
 }
