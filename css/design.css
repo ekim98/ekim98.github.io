@@ -94,6 +94,9 @@ img {
         height: auto;
         width: auto;
     }
+    body{
+        font-size: 150%;
+    }
 }
 
 @media (max-width: 1190px) {
