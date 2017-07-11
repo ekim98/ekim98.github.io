@@ -5,6 +5,15 @@ body, html {
     color: #777;
 }
 
+h3{
+    color: #111;
+}
+
+p{
+    font-size: 150%;
+    line-height: 1.5;
+}
+
 .navbar {
     background-color: transparent;
     background: transparent;
@@ -83,8 +92,8 @@ li a:hover {
     background-color: white;
 }
 
-img {
-    margin: auto;
+#address{
+    padding: 100px 5px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -159,5 +168,8 @@ img {
     .selected, .selected:focus{
         background-color: white!important;
         color: #656565!important;
+    }
+    #address{
+        padding: 5px;
     }
 }
