@@ -98,13 +98,8 @@ li a:hover {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1190px) {
-    body, html {
-        height: 50%;
-    }
     .banner {
         background-attachment: scroll;
-        height: auto;
-        width: auto;
     }
 }
 
