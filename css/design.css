@@ -26,6 +26,7 @@ p{
 
 .navbar-brand:hover {
     background-color: white!important;
+    color: #656565!important;
 }
 
 .banner {
@@ -113,6 +114,10 @@ li a:hover {
     border-top-width: 1px;
 }
 
+.mobile-hide{
+    display: inline !important;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1190px) {
     .banner {
@@ -120,6 +125,9 @@ li a:hover {
     }
     #content, #contact, #impressum{
         padding:25px 40px;
+    }
+    .mobile-hide{
+        display: none !important;
     }
 }
 
