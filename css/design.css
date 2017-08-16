@@ -14,6 +14,10 @@ p{
     line-height: 1.5;
 }
 
+.center{
+    margin: auto;
+}
+
 .navbar {
     background-color: transparent;
     background: transparent;
@@ -54,6 +58,7 @@ p{
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
+    line-height: 2;
 }
 
 .navbar-fixed-top.scrolled {
@@ -96,19 +101,32 @@ li a:hover {
     padding: 100px 5px;
 }
 
+#content, #contact, #impressum{
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:50px 80px;
+}
+#contact, #impressum{
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 1px;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1190px) {
-    body, html {
-        height: 50%;
-    }
     .banner {
         background-attachment: scroll;
-        height: auto;
-        width: auto;
+    }
+    #content, #contact, #impressum{
+        padding:25px 40px;
     }
 }
 
 @media (max-width: 1190px) {
+    #content, #contact, #impressum{
+        padding:25px 40px;
+    }
     .navbar {
         background-color: #656565;
         color: #ffffff;
