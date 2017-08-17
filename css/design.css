@@ -129,6 +129,9 @@ li a:hover {
     .mobile-hide{
         display: none !important;
     }
+    .img-banner{
+        padding: 0 5px;
+    }
 }
 
 @media (max-width: 1190px) {

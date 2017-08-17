@@ -126,3 +126,11 @@ function sendContactMail(name, mailAddress, subject, message, copy) {
         }
     });
 }
+
+function showNavbar(){
+    $("#navbarValue").collapse("show");
+}
+
+function hideNavbar(){
+    $("#navbarValue").collapse("hide");
+}
