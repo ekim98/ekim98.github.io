@@ -5,13 +5,29 @@ body, html {
     color: #777;
 }
 
+.btn, a, li {
+    transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #6064da;
+}
+
+.btn:hover{
+    background-color: white;
+    border-color: #6064da;
+    color: #6064da;
+}
+
 h3{
     color: #111;
 }
 
 p{
-    font-size: 150%;
-    line-height: 1.5;
+    font-size: 140%;
 }
 
 .center{
@@ -131,6 +147,24 @@ li a:hover {
     }
     .img-banner{
         padding: 0 10px;
+    }
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select:focus,
+    textarea {
+        font-size: 16px; /*For turning zoom into input on mobile off*/
     }
 }
 

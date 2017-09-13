@@ -10,13 +10,10 @@ var lastTextChange = "startseite";
 $(function () {
     $(document).scroll(function () {
         var $nav = $(".navbar-fixed-top");
-        var $active = $(".selected");
         if ($(this).scrollTop() > $nav.height()) {
             $($nav).addClass("scrolled");
-            //$($active).addClass("selectScroll");
         } else {
             $($nav).removeClass("scrolled");
-            //$($active).removeClass("selectScroll");
         }
     });
 });
