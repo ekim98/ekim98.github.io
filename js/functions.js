@@ -1,11 +1,5 @@
 const apiUrl = "php/contact";
-var startseiteTextShown = true,
-    abholmarktTextShown = false,
-    getraenkefachgrosshandelTextShown = false,
-    heimserviceTextShown = false,
-    skydancerTextShown = false,
-    sortimentTextShown = false;
-var lastTextChange = "startseite";
+var lastTextChange = "home";
 
 $(function () {
     $(document).scroll(function () {
@@ -18,17 +12,45 @@ $(function () {
     });
 });
 
-$(document).ready(function() {
-    $(document).on('submit', '#contactForm', function() {
-        sendContactMail($("#name").val(),$("#email").val(),$("#subject").val(),$("#message").val(), document.getElementById('copy').checked);
+$(document).ready(function () {
+    $(document).on('submit', '#contactForm', function () {
+        sendContactMail($("#name").val(), $("#email").val(), $("#subject").val(), $("#message").val(), document.getElementById('copy').checked);
         return false;
+    });
+    var $nav = $(".navbar-fixed-top");
+    if ($(this).scrollTop() > $nav.height()) {
+        $($nav).addClass("scrolled");
+    } else {
+        $($nav).removeClass("scrolled");
+    }
+    $(".navbar-brand").on('click', function (event) {
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        }
     });
 });
 
 function scrollTo(element) {
-    $('html, body').animate({
-        scrollTop: $(element).offset().top
-    }, 500);
+    if (element) {
+        $('html, body').animate({
+            scrollTop: $(element).offset().top
+        }, 500);
+    }
+    else {
+        $('html, body').animate({
+            scrollTop: $('#content').offset().top - 50
+        }, 500);
+    }
 }
 
 function changeActiveNavItem(itemID) {
@@ -36,71 +58,20 @@ function changeActiveNavItem(itemID) {
     $("#" + itemID).addClass("selected");
 }
 
-function getShownTextID() {
-    if (startseiteTextShown) {
-        startseiteTextShown = false;
-        return "startseite";
-    }
-    else if (abholmarktTextShown) {
-        abholmarktTextShown = false;
-        return "abholmarkt";
-    }
-    else if (getraenkefachgrosshandelTextShown) {
-        getraenkefachgrosshandelTextShown = false;
-        return "getränkefachgroßhandel";
-    }
-    else if (heimserviceTextShown) {
-        heimserviceTextShown = false;
-        return "heimservice";
-    }
-    else if (skydancerTextShown) {
-        skydancerTextShown = false;
-        return "skydancer";
-    }
-    else if (sortimentTextShown) {
-        sortimentTextShown = false;
-        return "sortiment";
-    }
-}
-
-function showTextArea(area) {
-    $("#" + area).collapse("show");
-    switch (area) {
-        case "startseite":
-            startseiteTextShown = true;
-            break;
-        case "abholmarkt":
-            abholmarktTextShown = true;
-            break;
-        case "getränkefachgroßhandel":
-            getraenkefachgrosshandelTextShown = true;
-            break;
-        case "heimservice":
-            heimserviceTextShown = true;
-            break;
-        case "skydancer":
-            skydancerTextShown = true;
-            break;
-        case "sortiment":
-            sortimentTextShown = true;
-            break;
-    }
-}
-
 function changeSiteValue(itemID, category) {
     if (category != lastTextChange) {
         changeActiveNavItem(itemID);
-        $("#" + getShownTextID()).collapse("hide");
-        showTextArea(category);
+        $("#" + lastTextChange).collapse("hide");
+        $("#" + category).collapse("show");
         lastTextChange = category;
-        scrollTo("#content");
     }
+    scrollTo();
 }
 
 function sendContactMail(name, mailAddress, subject, message, copy) {
     var items;
     items = JSON.stringify({
-        "name" : name,
+        "name": name,
         "mail": mailAddress,
         "subject": subject,
         "message": message,
@@ -124,10 +95,10 @@ function sendContactMail(name, mailAddress, subject, message, copy) {
     });
 }
 
-function showNavbar(){
+function showNavbar() {
     $("#navbarValue").collapse("show");
 }
 
-function hideNavbar(){
+function hideNavbar() {
     $("#navbarValue").collapse("hide");
 }

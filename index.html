@@ -4,10 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow"/>
-    <meta name="keywords" content="Axel Wismans, Getränke Wismans, Wismans Getränke, Getraenke Wismans, Getränke Emmerich, Getränke Rees, Getränke Wesel, Getränke Kalkar, Getränke Kleve, Veranstaltungsservice Emmerich, Getraenke Emmerich, Emmerich Getraenke, Getränke, Getränke Emmerich, Veranstaltung Emmerich"/>
+    <meta name="keywords"
+          content="Axel Wismans, Getränke Wismans, Wismans Getränke, Getraenke Wismans, Getränke Emmerich, Getränke Rees, Getränke Wesel, Getränke Kalkar, Getränke Kleve, Veranstaltungsservice Emmerich, Getraenke Emmerich, Emmerich Getraenke, Getränke, Getränke Emmerich, Veranstaltung Emmerich"/>
     <meta name="title" content="Getränkefachgroßhandel Wismans"/>
     <meta name="author" content="Administrator"/>
-    <meta name="description" content="Hier stellt sich die Firma Getränke Wismans GbR vor. Neben dem Abholmarkt gibt es ebenfalls einen Veranstaltungsservice."/>
+    <meta name="description"
+          content="Hier stellt sich die Firma Getränke Wismans GbR vor. Neben dem Abholmarkt gibt es ebenfalls einen Veranstaltungsservice."/>
     <title>Getränkefachgroßhandel Wismans</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
@@ -19,55 +21,30 @@
     <link rel="stylesheet" href="css/design.css">
     <script src="js/functions.js"></script>
 </head>
-<body>
+<body id="body">
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarValue"
-            onblur="hideNavbar()">
+            <button id="toggle-btn" type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbarValue"
+                    onblur="console.log('hello');$('#navbarValue').collapse('hide');">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" onclick="scrollTo('body')">Getränke Wismans</a>
+            <a class="navbar-brand" href="#">Getränke Wismans</a>
         </div>
         <div class="collapse navbar-collapse" id="navbarValue">
             <ul class="nav navbar-nav">
-                <li><a href="#startseite" id="startseiteNavbar" class="selected"
-                       onclick="changeSiteValue('startseiteNavbar', 'startseite')">Startseite</a></li>
-                <li><a href="#abholmarkt" id="abholmarktNavbar"
-                       onclick="changeSiteValue('abholmarktNavbar', 'abholmarkt')">Abholmarkt</a></li>
-                <li><a href="#getränkefachgroßhandel" id="getränkefachgroßhandelNavbar"
-                       onclick="changeSiteValue('getränkefachgroßhandelNavbar', 'getränkefachgroßhandel')">Getränkefachgroßhandel</a>
+                <li><a href="#home" id="homeNavbar" class="selected"
+                       onclick="changeSiteValue('homeNavbar', 'home')">Startseite</a></li>
+                <li><a href="#service" id="serviceNavbar"
+                       onclick="changeSiteValue('serviceNavbar', 'service')">Service</a></li>
+                <li><a href="#range" id="rangeNavbar" onclick="changeSiteValue('rangeNavbar', 'range')">Sortiment</a>
                 </li>
-                <li><a href="#heimservice" id="heimserviceNavbar"
-                       onclick="changeSiteValue('heimserviceNavbar', 'heimservice')">Heimservice</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="showNavbar()">Veranstaltungsservice
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Ausschankwagen Standard</a></li>
-                        <li><a href="#">Ausschankwagen ausklappbar</a></li>
-                        <li><a href="#">Ausschankwagen mit Kühlzelle</a></li>
-                        <li><a href="#">Kühlanhänger</a></li>
-                        <li><a href="#">Bierpavillon</a></li>
-                        <li><a href="#">Zapfanlagen</a></li>
-                        <li><a href="#">Baccardi Frozen Eismaschine</a></li>
-                        <li><a href="#">Eismaschine für MonsterSlush</a></li>
-                        <li><a href="#">Flaschentruhen</a></li>
-                        <li><a href="#">Stehtische</a></li>
-                        <li><a href="#">Tischgarnituren</a></li>
-                        <li><a href="#">Stühle</a></li>
-                        <li><a href="#">Gläser</a></li>
-                        <li><a href="#">Heizpilze / Heizgebläse</a></li>
-                        <li><a href="#">Spültheken/Sektbar</a></li>
-                    </ul>
-                </li>
-                <li><a href="#skydancer" id="skydancerNavbar" onclick="changeSiteValue('skydancerNavbar', 'skydancer')">Skydancer</a>
-                </li>
-                <li><a href="#sortiment" id="sortimentNavbar" onclick="changeSiteValue('sortimentNavbar', 'sortiment')">Sortiment</a>
-                </li>
-                <li><a href="Bestellliste.pdf">Bestelliste</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Bestellliste.pdf" target="_blank">Bestelliste</a></li>
             </ul>
         </div>
     </div>
@@ -81,7 +58,7 @@
 </div>
 
 <div id="content">
-    <div id="startseite" class="text-center collapse in">
+    <div id="home" class="text-center collapse in">
         <h3>Die Wismans GbR liefert Ihnen die Getränke nach Hause, ins Büro oder in die Gastronomie,
             dabei konzentrieren wir uns auf die Gebiete rund am Niederrhein.</h3>
         <p>Gerne richten wir Ihr Fest mit Zapfanlagen, Gläsern, Kühltruhen,
@@ -89,8 +66,7 @@
             Getränkewahl und Service.<br>
             Profitieren Sie von unserer langjährigen Erfahrung im Getränke - und Veranstaltungsservice.<br>
             <i>Ihr Getränke Wismans Team</i></p>
-    </div>
-    <div id="abholmarkt" class="text-center collapse text-center">
+        <hr>
         <h3>Hier finden Sie uns</h3>
         <p>Unser Getränkefachmarkt mit umfangreicher Auswahl liegt
             verkehrsgünstig an der B8 in Emmerich - Praest.
@@ -110,7 +86,7 @@
             Mittwoch: 8.30 - 12.30 Uhr | nachmittags geschlossen<br>
             Samstag: 08.00 - 13.00 Uhr</p>
     </div>
-    <div id="getränkefachgroßhandel" class="text-center collapse">
+    <div id="service" class="text-center collapse">
         <h3>Wir sind bekannt für unsere Kundennähe, sowie dem Liefer- und
             Veranstaltungsservice.</h3>
         <p>
@@ -120,15 +96,14 @@
             <br>
             Für Ihre Fragen über die Belieferung von Veranstaltungen und Heimservice sind wir Ihr Ansprechpartner!<br>
             Nehmen Sie Kontakt mit uns auf - wir erstellen Ihnen gerne ein Angebot.</p>
-    </div>
-    <div id="heimservice" class="text-center collapse">
-        <h3>Wir bieten Ihnen einen Lieferservice für Sie privat an (Raum Emmerich-Rees-Kleve). </h3>
+        <hr>
+        <h3>Wir bieten Ihnen einen Lieferservice für Sie privat an (Raum Emmerich-Rees-Kleve).</h3>
         <p>
             Den Verkaufspreis können Sie gerne bei uns im Büro erfragen - oder unser Kontaktformular nutzen.<br>
             Der Fahrer liefert die Kisten bis in die Wohnung und rechnet vor Ort mit Ihnen ab.<br>
             Nehmen Sie mit uns Kontakt auf!</p>
     </div>
-    <div id="skydancer" class="text-center collapse">
+    <div id="range" class="text-center collapse">
         <h3>Mich kann man Mieten!</h3>
         <div class="row">
             <div class="col-md-2">
@@ -159,8 +134,7 @@
                 <img src="img/skydancer_night.jpg" class="img-responsive img-rounded center">
             </div>
         </div>
-    </div>
-    <div id="sortiment" class="text-center collapse">
+        <hr>
         <h3></h3>
         <p>
         </p>
@@ -199,7 +173,8 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Nachricht eingeben:</label>
-                    <textarea class="form-control" id="message" rows="6" placeholder="Ihre Nachricht..." required></textarea>
+                    <textarea class="form-control" id="message" rows="6" placeholder="Ihre Nachricht..."
+                              required></textarea>
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox" id="copy"> Eine Kopie dieser Nachricht an Ihre E-Mail-Adresse
@@ -212,7 +187,7 @@
     </div>
 </div>
 
-<div id="impressum">
+<div id="imprint">
     <h3 class="text-center">Impressum</h3>
     <br>
     <h3>Verantwortlich:</h3>
@@ -228,26 +203,28 @@
         Geschäftsführer: Axel Wismans<br>
         Gerichtsstand: Amtsgericht Emmerich am Rhein<br>
         Steuernummer: 116 / 5837 / 0402<br>
-        Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV: Axel Wismans (Anschrift wie oben)<br>
+        Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV: Axel Wismans (Anschrift wie oben)<br><br>
         <b>Konzeption, Design und Umsetzung:</b><br>
         Schmidt-Websites GmbH<br>
     </p>
     <hr>
-    <h3>Rechtliche Hinweise:</h3>
-    <p style="text-align: left">
-        Die Getränke Wismans GbR prüft und aktualisiert die Informationen auf diesen Webseiten ständig.
-        Trotz aller Sorgfalt können sich die Daten inzwischen verändert haben. Eine Haftung oder Garantie für die
-        Aktualität, Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen kann daher nicht
-        übernommen werden. Gleiches gilt auch für alle anderen Webseiten, auf die mittels Hyperlink verwiesen wird.
-        Die Getränke Wismans GbR ist für den Inhalt der Webseiten, die aufgrund einer solchen Verbindung erreicht
-        werden, nicht verantwortlich.<br>
-        Des weiteren behält sich die Getränke Wismans GbR das Recht vor, Änderungen oder Ergänzungen der
-        bereitgestellten Informationen vorzunehmen.<br>
-        Inhalt und Struktur der Website sind urheberrechtlich geschützt. Die Vervielfältigung von Informationen
-        oder Daten, insbesondere die Verwendung von Texten, Textteilen oder Bildmaterial, bedarf der vorherigen
-        Zustimmung der Getränke Wismans GbR.<br>
-        Alle eingetragenen Warenzeichen, Logos und Signets sind Eigentum der jeweiligen Eigentümer.<br>
-    </p>
+    <div id="legalNotice">
+        <h3>Rechtliche Hinweise:</h3>
+        <p style="text-align: left">
+            Die Getränke Wismans GbR prüft und aktualisiert die Informationen auf diesen Webseiten ständig.
+            Trotz aller Sorgfalt können sich die Daten inzwischen verändert haben. Eine Haftung oder Garantie für die
+            Aktualität, Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen kann daher nicht
+            übernommen werden. Gleiches gilt auch für alle anderen Webseiten, auf die mittels Hyperlink verwiesen wird.
+            Die Getränke Wismans GbR ist für den Inhalt der Webseiten, die aufgrund einer solchen Verbindung erreicht
+            werden, nicht verantwortlich.<br>
+            Des weiteren behält sich die Getränke Wismans GbR das Recht vor, Änderungen oder Ergänzungen der
+            bereitgestellten Informationen vorzunehmen.<br>
+            Inhalt und Struktur der Website sind urheberrechtlich geschützt. Die Vervielfältigung von Informationen
+            oder Daten, insbesondere die Verwendung von Texten, Textteilen oder Bildmaterial, bedarf der vorherigen
+            Zustimmung der Getränke Wismans GbR.<br>
+            Alle eingetragenen Warenzeichen, Logos und Signets sind Eigentum der jeweiligen Eigentümer.<br>
+        </p>
+    </div>
 </div>
 
 </body>
