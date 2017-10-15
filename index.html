@@ -37,10 +37,10 @@
         <div class="collapse navbar-collapse" id="navbarValue">
             <ul class="nav navbar-nav">
                 <li><a href="#home" id="homeNavbar" class="selected"
-                       onclick="changeSiteValue('homeNavbar', 'home')">Startseite</a></li>
+                       onclick="changeSiteValue('homeNavbar', 'home'); hideNavbar()">Startseite</a></li>
                 <li><a href="#service" id="serviceNavbar"
-                       onclick="changeSiteValue('serviceNavbar', 'service')">Service</a></li>
-                <li><a href="#range" id="rangeNavbar" onclick="changeSiteValue('rangeNavbar', 'range')">Sortiment</a>
+                       onclick="changeSiteValue('serviceNavbar', 'service'); hideNavbar()">Service</a></li>
+                <li><a href="#range" id="rangeNavbar" onclick="changeSiteValue('rangeNavbar', 'range'); hideNavbar()">Sortiment</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -102,8 +102,22 @@
             Der Fahrer liefert die Kisten bis in die Wohnung und rechnet vor Ort mit Ihnen ab.<br>
             Nehmen Sie mit uns Kontakt auf!</p>
         <hr>
+        <h3 style="text-transform: uppercase">Heinmservice</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="margin-top: 30px">
+                    Wir bieten Ihnen einen Lieferservice für Sie privat an (Raum Emmerich-Rees-Kleve). Den Verkaufspreis können Sie gerne bei uns im Büro erfragen - oder unser Kontaktformular nutzen.<br>
+                    Der Fahrer liefert die Kisten bis in die Wohnung und rechnet vor Ort mit Ihnen ab.<br>
+                    Nehmen Sie mit uns <a class="contact" href="#contact">Kontakt</a> auf!<br>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="img/lieferservice.jpg" alt="Lieferwagen" title="Lieferwagen">
+            </div>
+        </div>
+        <hr>
         <h3 style="text-transform: uppercase">Veranstaltungsservice</h3>
-        <div class="row" style="margin: 20px 0">
+        <div class="row">
             <div class="col-md-4" style="margin: 40px 0">
                 <div class="w3-card-2">
                     <img src="img/Getraenkewagen.png" alt="Getränkewagen" title="Getränkewagen">

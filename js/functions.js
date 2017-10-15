@@ -23,14 +23,14 @@ $(document).ready(function () {
     } else {
         $($nav).removeClass("scrolled");
     }
-    $(".navbar-brand").on('click', function (event) {
+    $(".navbar-brand, .contact").on('click', function (event) {
         if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
             var hash = this.hash;
 
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top - 50
             }, 1000, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
@@ -43,7 +43,7 @@ $(document).ready(function () {
 function scrollTo(element) {
     if (element) {
         $('html, body').animate({
-            scrollTop: $(element).offset().top
+            scrollTop: $('#' + element).offset().top - 50
         }, 500);
     }
     else {
