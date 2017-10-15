@@ -1,8 +1,21 @@
 body, html {
     height: 90%;
-    margin: 0;
+    margin: auto;
     font-family: "Lato", sans-serif;
     color: #777;
+    max-width: 1600px;
+    background-color: #efefef;
+}
+
+#content,
+#contact,
+#imprint {
+    background-color: white;
+}
+
+#legalNotice {
+    margin: auto;
+    max-width: 1080px;
 }
 
 .btn, a, li {
@@ -19,11 +32,11 @@ a, a:hover {
 .btn:hover{
     background-color: white;
     border-color: #6064da;
-    color: #6064da;
 }
 
 h3{
     color: #111;
+    margin: 20px 0;
 }
 
 p{
@@ -38,6 +51,10 @@ p{
     background-color: transparent;
     background: transparent;
     border-color: transparent;
+    line-height: 1.42857143;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
 }
 
 .navbar-brand:hover {
@@ -118,13 +135,13 @@ li a:hover {
     padding: 100px 5px;
 }
 
-#content, #contact, #impressum{
+#content, #contact, #imprint{
     color: #777;
     background-color:white;
     text-align:center;
     padding:50px 80px;
 }
-#contact, #impressum{
+#contact, #imprint{
     border-top-style: solid;
     border-top-color: black;
     border-top-width: 1px;
@@ -134,12 +151,20 @@ li a:hover {
     display: inline !important;
 }
 
+.img-responsive{
+    margin: auto;
+}
+
+.collapseContent{
+    margin-bottom: 20px;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1190px) {
     .banner {
         background-attachment: scroll;
     }
-    #content, #contact, #impressum{
+    #content, #contact, #imprint{
         padding:25px 40px;
     }
     .mobile-hide{
@@ -169,7 +194,7 @@ li a:hover {
 }
 
 @media (max-width: 1190px) {
-    #content, #contact, #impressum{
+    #content, #contact, #imprint{
         padding:25px 40px;
     }
     .navbar {
