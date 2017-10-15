@@ -151,8 +151,12 @@ li a:hover {
     display: inline !important;
 }
 
-.w3-card-2{
-    overflow: auto;
+.img-responsive{
+    margin: auto;
+}
+
+.collapseContent{
+    margin-bottom: 20px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
