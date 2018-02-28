@@ -4,14 +4,15 @@
     <property name="created">2017-10-01T19:45:30</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2017.1.4.0.0</property>
-    <property name="modified">2017-10-01T19:49:17</property>
+    <property name="modified">2018-02-28T14:09:16</property>
     <property name="originalScheme">WarmNeon</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.1" />
   <option name="EDITOR_FONT_SIZE" value="14" />
-  <option name="CONSOLE_FONT_NAME" value="Menlo" />
-  <option name="EDITOR_QUICK_DOC_FONT_SIZE" value="MEDIUM" />
   <option name="EDITOR_FONT_NAME" value="Monospaced" />
+  <option name="CONSOLE_FONT_NAME" value="Menlo" />
+  <option name="CONSOLE_LINE_SPACING" value="1.1" />
+  <option name="EDITOR_QUICK_DOC_FONT_SIZE" value="MEDIUM" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="395439" />
     <option name="ANNOTATIONS_COLOR" value="8178af" />
@@ -680,9 +681,19 @@
         <option name="FOREGROUND" value="e45041" />
       </value>
     </option>
+    <option name="JS.BRACES">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
     <option name="JS.BRACKETS">
       <value>
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="JS.COMMA">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
       </value>
     </option>
     <option name="JS.DOC_COMMENT">
@@ -693,6 +704,11 @@
     <option name="JS.DOC_MARKUP">
       <value>
         <option name="FOREGROUND" value="a63434" />
+      </value>
+    </option>
+    <option name="JS.DOT">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
       </value>
     </option>
     <option name="JS.GLOBAL_FUNCTION">
@@ -721,6 +737,7 @@
     </option>
     <option name="JS.PARENTHS">
       <value>
+        <option name="FOREGROUND" value="ffffff" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -855,6 +872,48 @@
       <value>
         <option name="FOREGROUND" value="eaed5b" />
         <option name="BACKGROUND" value="2a526e" />
+      </value>
+    </option>
+    <option name="PHP_BRACES">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="PHP_BRACKETS">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="PHP_COMMA">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="PHP_OPERATION_SIGN">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="PHP_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="cfdb96" />
+        <option name="EFFECT_COLOR" value="8080" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="PHP_PARENTHESES">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="PHP_SEMICOLON">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="PHP_VAR">
+      <value>
+        <option name="FOREGROUND" value="797ab9" />
       </value>
     </option>
     <option name="PROPERTIES.LINE_COMMENT">
