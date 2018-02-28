@@ -11,4 +11,3 @@ if ($request["copy"]) $headers .= ', ' . $request["mail"];
 $headers .= "\r\n";
 $response = mail($to,$subject,$message,$headers);
 echo $response;
-
