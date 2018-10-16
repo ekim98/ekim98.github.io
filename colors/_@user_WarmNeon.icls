@@ -3,7 +3,7 @@
     <property name="created">2018-02-28T14:55:48</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2017.3.4.0.0</property>
-    <property name="modified">2018-02-28T15:03:43</property>
+    <property name="modified">2018-10-16T18:26:00</property>
     <property name="originalScheme">WarmNeon</property>
   </metaInfo>
   <colors>
@@ -564,7 +564,6 @@
     </option>
     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="46464d" />
         <option name="ERROR_STRIPE_COLOR" value="ccccff" />
       </value>
     </option>
@@ -916,7 +915,6 @@
     <option name="PHP_VAR">
       <value>
         <option name="FOREGROUND" value="797ab9" />
-        <option name="BACKGROUND" value="404040" />
       </value>
     </option>
     <option name="PROPERTIES.LINE_COMMENT">
@@ -1250,7 +1248,7 @@
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="9bc28e" />
-        <option name="BACKGROUND" value="404040" />
+        <option name="BACKGROUND" value="212121" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
@@ -1300,7 +1298,6 @@
     </option>
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="4d444d" />
         <option name="ERROR_STRIPE_COLOR" value="ffcdff" />
       </value>
     </option>
